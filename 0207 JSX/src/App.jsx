@@ -4,7 +4,8 @@ const App = () => {
   return (
     <>
       {/* <Jsx0207 /> */}
-      <Arrays0208 />
+      {/* <Arrays0208 /> */}
+      <Eventos0209 />
     </>
   );
 };
@@ -168,4 +169,11 @@ function Arrays0208() {
   );
 }
 
+function Eventos0209() {
+  function handleClick(event) {
+    console.log(event.currentTarget)
+  }
+  
+  return <button onClick={handleClick} onMouseMove={({target}) => {console.log(target.innerText)}}>Clicar</button>
+}
 export default App;
