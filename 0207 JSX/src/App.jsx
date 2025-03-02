@@ -1,11 +1,17 @@
 import React from 'react';
+import Header from './Header.jsx'
+import Footer from './Footer.jsx'
+import Form from './Form/Form.jsx';
 
 const App = () => {
   return (
     <>
       {/* <Jsx0207 /> */}
       {/* <Arrays0208 /> */}
+      <Header />
       <Eventos0209 />
+      <Form />
+      <Footer />
     </>
   );
 };
