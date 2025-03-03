@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Header.jsx'
-import Footer from './Footer.jsx'
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
 import Form from './Form/Form.jsx';
 
 const App = () => {
@@ -12,6 +12,7 @@ const App = () => {
       <Eventos0209 />
       <Form />
       <Footer />
+      <Propriedades0211 />
     </>
   );
 };
@@ -177,9 +178,41 @@ function Arrays0208() {
 
 function Eventos0209() {
   function handleClick(event) {
-    console.log(event.currentTarget)
+    console.log(event.currentTarget);
   }
-  
-  return <button onClick={handleClick} onMouseMove={({target}) => {console.log(target.innerText)}}>Clicar</button>
+
+  return (
+    <button
+      onClick={handleClick}
+      onMouseMove={({ target }) => {
+        console.log(target.innerText);
+      }}
+    >
+      Clicar
+    </button>
+  );
 }
 export default App;
+
+function Propriedades0211() {
+  function Titulo(props) {
+    return <h1 style={{ color: props.cor }}>{props.texto}</h1>;
+  }
+
+  function Texto({ texto, background, children }) {
+    return (
+      <p style={{ backgroundColor: background }}>
+        {texto}: {children}
+      </p>
+    );
+  }
+
+  return (
+    <>
+      <Titulo cor="#00579D" texto="Meu título" />
+      <Texto texto="lorem ipsum" background="#ccc">
+        isso é o children
+      </Texto>
+    </>
+  );
+}
