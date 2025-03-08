@@ -1,11 +1,15 @@
 import React from 'react';
 import ButtonModal from './ButtonModal';
 import Modal from './Modal';
+import AdicionarLi from './AdicionarLi';
 
 const App = () => {
   const [ativo, setAtivo] = React.useState(false);
   const [dados, setDados] = React.useState({ nome: 'Gabriel', idade: 29 });
-  const [modal, setModal] = React.useState(false);
+  const [modal, setModal] = React.useState(() => {
+    const ativo = window.localStorage.getItem('ativo')
+    return ativo // como não tem esse item no localStorage, retorna null
+  });
   function handleClick() {
     setAtivo(!ativo);
     setDados({ ...dados, sobrenome: 'linhares' });
@@ -19,6 +23,7 @@ const App = () => {
       <button onClick={handleClick}>{ativo ? 'Ativo' : 'Inativo'}</button>
       <Modal modal={modal} setModal={setModal} />
       <ButtonModal setModal={setModal} />
+      <AdicionarLi />
     </>
   );
 };
