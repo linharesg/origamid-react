@@ -1,7 +1,14 @@
 import React from 'react';
+import InputsIndividuais from './InputsIndividuais';
+import InputPorFormulario from './InputPorFormulario';
 
 const App = () => {
-  return <div>App React</div>;
+  return (
+    <>
+    {/* <InputsIndividuais /> */}
+    <InputPorFormulario />
+    </>
+  );
 };
 
 export default App;
