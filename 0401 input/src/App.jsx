@@ -1,12 +1,14 @@
 import React from 'react';
-import InputsIndividuais from './InputsIndividuais';
-import InputPorFormulario from './InputPorFormulario';
+import InputsIndividuais from './Aula/InputsIndividuais';
+import InputPorFormulario from './Aula/InputPorFormulario';
+import Exercicio from './Exercicio/Exercicio';
 
 const App = () => {
   return (
     <>
     {/* <InputsIndividuais /> */}
-    <InputPorFormulario />
+    {/* <InputPorFormulario /> */}
+    <Exercicio />
     </>
   );
 };
