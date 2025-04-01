@@ -1,0 +1,6 @@
+@value corBorda: #4f5;
+@value espessuraBorda: 4px;
+
+.titulo {
+  border: solid corBorda espessuraBorda;  
+}
