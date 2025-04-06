@@ -1,12 +1,24 @@
-import React from 'react'
+import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import './Header.css';
 
 const Header = () => {
   return (
-    <div>
-      <h2>Bem víndo</h2>
-      <p>Essa é a header</p>
-    </div>
-  )
-}
+    <>
+      <nav>
+        <Link to="/">Home</Link> | <Link to="sobre">Sobre</Link>
+      </nav>
+      <nav>
+        <NavLink to="/" end>
+          Home
+        </NavLink>{' '}
+        | <NavLink to="sobre">Sobre</NavLink>
+      </nav>
+      <nav>
+        <NavLink to="login">Login</NavLink>
+      </nav>
+    </>
+  );
+};
 
-export default Header
+export default Header;
