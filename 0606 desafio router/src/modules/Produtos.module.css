@@ -1,0 +1,17 @@
+.foto {
+  max-width: 200px;
+  border-radius: 4px;
+}
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.tituloProduto {
+  margin-top: 0;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}

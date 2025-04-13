@@ -1,0 +1,2 @@
+https://ranekapi.origamid.dev/json/api/produto
+https://ranekapi.origamid.dev/json/api/produto/notebook
