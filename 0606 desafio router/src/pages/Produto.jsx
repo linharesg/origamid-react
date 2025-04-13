@@ -29,7 +29,7 @@ const Produto = () => {
     );
   if (data) {
     return (
-      <div className={`${styles.produto} animeLeft`}>
+      <section className={`${styles.produto} animeLeft`}>
         <Head title={data.nome} description="Página de produtos" />
         <div className={styles.fotos}>
           {data.fotos.map(({ src, titulo }, index) => (
@@ -41,7 +41,7 @@ const Produto = () => {
           <p className={styles.preco}>R$ {data.preco}</p>
           <p>{data.descricao}</p>
         </div>
-      </div>
+      </section>
     );
   }
 };
